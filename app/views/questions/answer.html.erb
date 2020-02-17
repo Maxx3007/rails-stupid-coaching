@@ -1,0 +1,29 @@
+<h1>Life Coach</h1>
+
+<div class="container">
+
+
+<%= @answer %>
+
+<p><em>-You</em></p>
+
+</div>
+
+<br>
+
+<div class="container">
+<%=
+    if @answer == "I am going to work"
+      "Great!"
+    elsif @answer.include? "?"
+      "Silly question, get dressed and go to work!"
+    else
+      "I don't care, get dressed and go to work!"
+    end %>
+<p>Now go away</p>
+<p><em>-Your lovely Coach</em></p>
+</div>
+<br>
+
+<%= link_to "return", "/ask" %>
+
